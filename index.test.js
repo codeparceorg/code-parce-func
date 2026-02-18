@@ -23,37 +23,14 @@ app.get('/data', async (req, res) => {
     const collection = req.body.collection;
 
     const snapshot = await firestore.collection(collection).get();
+    let data = null
 
-    const data = await Promise.all(
-      snapshot.docs.map(async (doc) => {
+    if (collection === 'proyects' || collection === 'skills') {
+      console.log("collectio: " + collection)
+      data = await getDataFirestore(snapshot)
+    }
 
-        const docData = doc.data();
-
-        let urls = [];
-
-        urls = await Promise.all(
-          docData.images.map(async (img) => {
-
-            const file = bucket.file("imagenes/" + img);
-
-            const [url] = await file.getSignedUrl({
-              action: 'read',
-              expires: Date.now() + 15 * 60 * 1000, // 15 minutos
-            });
-
-            return url;
-          })
-        );
-
-
-        return {
-          id: doc.id,
-          ...docData,
-          urls
-        };
-      })
-    );
-
+    //console.log(data)
 
     res.status(200).json(data);
 
@@ -65,6 +42,35 @@ app.get('/data', async (req, res) => {
 });
 
 const PORT = 8080;
+
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
+
+
+const getDataFirestore = async (snapshot) => {
+  return await Promise.all(
+    snapshot.docs.map(async (doc) => {
+
+      const docData = doc.data();
+      docData.urls = await Promise.all(
+        docData.images.map(async (img) => {
+          const file = bucket.file("imagenes/" + img);
+
+          const [url] = await file.getSignedUrl({
+            action: 'read',
+            expires: Date.now() + 15 * 60 * 1000, // 15 minutos
+          });
+
+          return url;
+        })
+      );
+
+      return {
+        id: doc.id,
+        ...docData,
+      };
+    })
+  );
+
+}
