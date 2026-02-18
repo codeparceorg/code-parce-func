@@ -36,3 +36,11 @@
 - Verificar que `key.json` existe y `GOOGLE_APPLICATION_CREDENTIALS` apunta correctamente.
 - Comprobar permisos de la cuenta de servicio para Firestore y Storage.
 
+## key.json
+
+Comando para sacar el  de la cuenta de servicio, solo se genera este key para probar los test, no es necesario crealas para los deploys
+
+```bash
+gcloud iam service-accounts keys create key.json --iam-account=Cuenta-de-servicio@proyecto.iam.gserviceaccount.com
+```
+
