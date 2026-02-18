@@ -1,0 +1,26 @@
+{
+  "name": "code-parce-fun",
+  "version": "1.0.0",
+  "description": "function getData for code parce page",
+  "keywords": [
+    "Functions",
+    "GCP",
+    "Cloud",
+    "Run"
+  ],
+  "license": "ISC",
+  "author": "Code Parce",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.test.js"
+  },
+  "dependencies": {
+    "@google-cloud/firestore": "^7.11.0",
+    "@google-cloud/storage": "^7.19.0"
+  },
+  "devDependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1"
+  }
+}
