@@ -5,7 +5,7 @@ const storage = new Storage({
   projectId: process.env.PROJECT_ID
 });
 
-const bucket = storage.bucket(process.env.BUCKET_NAME);
+const bucket = storage.bucket(process.env.BUCKET);
 
 const firestore = new Firestore({
     projectId: process.env.PROJECT_ID,
