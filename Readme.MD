@@ -42,5 +42,9 @@ Comando para sacar el  de la cuenta de servicio, solo se genera este key para pr
 
 ```bash
 gcloud iam service-accounts keys create key.json --iam-account=Cuenta-de-servicio@proyecto.iam.gserviceaccount.com
+#Activar mediante el key.json
+gcloud auth activate-service-account --key-file=key.json
+#listar
+gcloud auth list
 ```
 
