@@ -44,3 +44,6 @@ Comando para sacar el  de la cuenta de servicio, solo se genera este key para pr
 gcloud iam service-accounts keys create key.json --iam-account=Cuenta-de-servicio@proyecto.iam.gserviceaccount.com
 ```
 
+## Arquitectura 
+
+![Arquitectura ](gcp-arq-func.svg)
