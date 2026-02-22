@@ -9,6 +9,6 @@ on:
 jobs:
   init:
     name: CI Workflow
-    uses: codeparceorg/ci-workflows/.github/workflows/functions-gcp.yml@functions
+    uses: codeparceorg/ci-workflows/.github/workflows/init-gcp.yml@functions
     secrets: inherit
       
