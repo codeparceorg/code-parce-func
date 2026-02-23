@@ -13,38 +13,44 @@ const firestore = new Firestore({
 });
 
 exports.getData = async (req, res) => {
+
+  res.set('Access-Control-Allow-Origin', '*');
+  res.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.set('Access-Control-Allow-Headers', 'Content-Type');
+
+  if (req.method === 'OPTIONS') {
+    return res.status(204).send('');
+  }
+
   try {
-    res.set('Access-Control-Allow-Origin', '*');
 
-    res.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-    res.set('Access-Control-Allow-Headers', 'Content-Type');
-
-    // Manejar preflight (IMPORTANTE para POST)
-    if (req.method === 'OPTIONS') {
-      return res.status(204).send('');
+    if (req.method !== 'POST') {
+      return res.status(405).json({ msg: 'Method Not Allowed' });
     }
 
-    const collection = req.body.collection;
+    const collection = req.body?.collection;
+
+    if (!collection) {
+      return res.status(400).json({ msg: 'Collection requerida' });
+    }
+
+    console.log("collection:", collection);
 
     const snapshot = await firestore.collection(collection).get();
-    let data = null
+
+    let data = null;
 
     if (collection === 'proyects' || collection === 'skills') {
-      console.log("collectio: " + collection)
-      data = await getDataFirestore(snapshot)
+      data = await getDataFirestore(snapshot);
     }
 
-    //console.log(data)
-
-    res.status(200).json(data);
+    return res.status(200).json(data);
 
   } catch (error) {
     console.error(error);
-    const msg = { status: 500, msg: 'Error leyendo Firestore' }
-    res.status(500).json(msg);
+    return res.status(500).json({ msg: 'Error leyendo Firestore' });
   }
 };
-
 
 const getDataFirestore = async (snapshot) => {
   return await Promise.all(
