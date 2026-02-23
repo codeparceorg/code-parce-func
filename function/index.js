@@ -19,7 +19,7 @@ exports.getData = async (req, res) => {
   res.set('Access-Control-Allow-Headers', 'Content-Type');
 
   if (req.method === 'OPTIONS') {
-    return res.status(204).send('');
+    return res.status(204).end();
   }
 
   try {
