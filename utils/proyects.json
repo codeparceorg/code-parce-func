@@ -1,0 +1,183 @@
+[
+    {
+        "titulo": "Migración de proyectos a Microsoft Azure",
+        "empresa": "Sudamericana de Software",
+        "area": "devops",
+        "descripcion": "Planificación y ejecución de la migración de aplicaciones on-premise a la nube de Azure, automatizando la infraestructura como código con Terraform y configurando pipelines CI/CD con GitHub Actions para despliegues continuos y seguros.",
+        "tecnologias": [
+            "Microsoft Azure",
+            "Terraform",
+            "GitHub Actions",
+            "Azure App Service",
+            "Azure Container apps",
+            "Azure Container Registries",
+            "Azure Static web apps",
+            "Azure Storage Account",
+            "Azure SQL",
+            "Docker",
+            "Bash"
+        ],
+        "images": [
+            "azure.png",
+            "terraform.png",
+            "github-actions.png",
+            "appservice.png",
+            "vnet.png",
+            "storage.png",
+            "azuresql.png",
+            "docker.png",
+            "bash.png"
+        ]
+    },
+    {
+        "titulo": "Implementación de CI/CD a la empresa",
+        "empresa": "Sudamericana de Software",
+        "area": "devops",
+        "descripcion": "Diseño e implementación de pipelines de integración y entrega continua para automatizar el ciclo de vida del desarrollo.",
+        "tecnologias": [
+            "GitLab CI/CD",
+            "GitLab Runner",
+            "Docker",
+            "Docker Compose",
+            "Docker Swarm",
+            "Bash",
+            "Docker registry",
+            "Vault",
+            "SonarQube",
+            "Traefik"
+        ],
+        "images": [
+            "gitlab_ci_cd.png",
+            "gitlab.webp",
+            "runner.png",
+            "docker.webp",
+            "bash.png",
+            "registry.png",
+            "vault.svg",
+            "sonar.svg",
+            "traefik.png"
+        ]
+    },
+    {
+        "titulo": "Desarrollo de API con AWS CDK ",
+        "empresa": "Banco Bolivariano",
+        "area": "cloud",
+        "descripcion": "Implementación de funciones serverless para automatizar procesos de consulta internos del banco usando AWS CDK",
+        "tecnologias": [
+            "AWS Lambda",
+            "AWS CDK",
+            "TypeScript",
+            "API Gateway",
+            "CloudWatch"
+        ],
+        "images": [
+            "lambda.png",
+            "ag.png",
+            "cw.png",
+            "cdk.png",
+            "ts.svg",
+            "aws.png"
+        ]
+    },
+    {
+        "titulo": "Asegurador de calidad de proyectos",
+        "empresa": "Sudamericana de Software",
+        "area": "QA",
+        "descripcion": "Ejecución de pruebas automatizadas y manuales para validar funcionalidades en diferentes desarrollos internos.",
+        "tecnologias": [
+            "Cypress",
+            "Playwright",
+            "Cucumber",
+            "GitLab",
+            "Postman",
+            "JMeter",
+            "Postgres"
+        ],
+        "images": [
+            "gitlab.webp",
+            "pw.png",
+            "plsql.webp",
+            "postgresql.png",
+            "cucumber.jpeg",
+            "postman.webp",
+            "jmeter.svg",
+            "cy.webp"
+        ]
+    },
+    {
+        "titulo": "Desarrollador front-end en SASF",
+        "empresa": "Sudamericana de Software",
+        "area": "frontend",
+        "descripcion": "Desarrollo y mantenimiento de interfaces de usuario modernas y responsivas para aplicaciones empresariales.",
+        "tecnologias": [
+            "React",
+            "Webpack",
+            "Vite",
+            "Tailwind CSS",
+            "ShadCN",
+            "Angular",
+            "Angular Material"
+        ],
+        "images": [
+            "react.png",
+            "webpack.png",
+            "vite.png",
+            "tl.png",
+            "shadcn.png",
+            "angular.png"
+        ]
+    },
+    {
+        "titulo": "Desarrollador back-end en SASF",
+        "empresa": "Sudamericana de Software",
+        "area": "backend",
+        "descripcion": "Diseño y desarrollo de APIs REST empresariales con arquitectura en capas, integración con servicios en la nube y automatización de despliegues en entornos Azure.",
+        "tecnologias": [
+            "Java",
+            "Spring Boot",
+            "Spring Security",
+            "JPA / Hibernate",
+            "Maven",
+            "Azure App Service",
+            "Azure SQL",
+            "Docker"
+        ],
+        "images": [
+            "java.png",
+            "springboot.png",
+            "springsecurity.png",
+            "hibernate.png",
+            "maven.png",
+            "azure.png",
+            "docker.png"
+        ]
+    },
+    {
+        "titulo": "Asegurador de calidad de proyectos",
+        "empresa": "Telconet",
+        "area": "QA",
+        "descripcion": "Responsable de pruebas funcionales y no funcionales, garantizando la calidad del software antes de su puesta en producción.",
+        "tecnologias": [
+            "PL/SQL",
+            "Katalon",
+            "Postman",
+            "JMeter",
+            "TestRail",
+            "GitLab CI/CD",
+            "Mongo DB",
+            "Redis",
+            "Postgres"
+        ],
+        "images": [
+            "gitlab_ci_cd.png",
+            "mongo.webp",
+            "plsql.webp",
+            "postgresql.png",
+            "testrail.png",
+            "redis.png",
+            "postman.webp",
+            "jmeter.svg",
+            "mongo.webp"
+        ]
+    }
+]

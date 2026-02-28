@@ -1,0 +1,23 @@
+{
+  "name": "code-parce-backend",
+  "version": "1.0.0",
+  "description": "function upData para actualizar los datos",
+  "keywords": [
+    "GCP",
+    "Cloud",
+    "Run"
+  ],
+  "license": "ISC",
+  "author": "Code Parce",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "@google-cloud/firestore": "^7.11.0"
+  },
+  "devDependencies": {
+    "dotenv": "^17.3.1"
+  }
+}
